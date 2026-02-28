@@ -99,6 +99,13 @@ app.post('/print', async (req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+    res.send('Thermal Printer API is running! Use /print to send jobs.');
+});
+
+
+module.exports = app; 
+
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
