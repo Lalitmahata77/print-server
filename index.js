@@ -64,9 +64,9 @@ const PORT = 3000;
 const printToThermal = (ip, text) => {
     return new Promise((resolve, reject) => {
         // We set a timeout so one offline printer doesn't hang the whole request
-        const device = new escpos.Network(ip, 9100); 
+        const device = new escpos.Network('printer.lokendrachaulagain.com.np', 9100); 
         const printer = new escpos.Printer(device);
-
+``
         device.open((err) => {
             if (err) return reject(`Connection failed for ${ip}`);
 
